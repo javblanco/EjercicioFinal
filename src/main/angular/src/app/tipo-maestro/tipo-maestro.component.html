@@ -16,6 +16,7 @@
         <th scope="col">Características</th>
         <th scope="col">Época</th>
         <th scope="col">Artistas</th>
+        <th scope="col">Habilitado</th>
       </tr>
     </thead>
     <tbody>
@@ -25,6 +26,7 @@
             <td>{{tipo.caracteristicas}}</td>
             <td>{{tipo.epoca}}</td>
             <td>{{tipo.artistas}}</td>
+            <td><div *ngIf="tipo.habilitado; else NoPri">Si</div><ng-template #NoPri>No</ng-template></td>
             <td><button style="margin:10px;"  class="btn btn-warning" routerLink="/tipo/{{tipo.id}}" >Actualizar</button> <button style="margin:10px;" class="btn btn-danger" (click)="borrar(tipo.id)">Borrar</button></td>
         </tr>
     </tbody>

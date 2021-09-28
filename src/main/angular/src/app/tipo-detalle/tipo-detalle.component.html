@@ -21,8 +21,15 @@
 
 <label for="artistas">Artistas:</label>
 <input class="form-control"  id="artistas" type="string" placeholder="Escribe los principales artistas" name="artistas" [(ngModel)]="tipo.artistas" maxlength="60"> <br>
+     
+<label for="habilitado">Habilitado :</label>
+    <input name="habilitado" ng-control="options" type="radio" [value]="true"  [(ngModel)]="tipo.habilitado" >SI
+    <input  name="habilitado" ng-control="options" type="radio" [value]="false"  [(ngModel)]="tipo.habilitado" >NO 
+    <br>
 
-      <div *ngIf="this.id!=0">
+
+
+<div *ngIf="this.id!=0">
         <app-obra-de-tipo-detalle></app-obra-de-tipo-detalle>
         <br>
       </div>

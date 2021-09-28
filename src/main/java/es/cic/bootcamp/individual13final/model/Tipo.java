@@ -23,17 +23,27 @@ public class Tipo {
 	private String caracteristicas;
 	private String epoca;
 	private String artistas;
+	private boolean habilitado;
 	
 	public Tipo(String nombre, String descripcion, String caracteristicas,
-			String epoca, String artistas) {
+			String epoca, String artistas, boolean habilitado) {
 		super();
 		this.nombre=nombre;
 		this.descripcion=descripcion;
 		this.caracteristicas=caracteristicas;
 		this.epoca=epoca;
 		this.artistas=artistas;
+		this.habilitado=habilitado;
 	}
 	
+	public boolean isHabilitado() {
+		return habilitado;
+	}
+
+	public void setHabilitado(boolean habilitado) {
+		this.habilitado = habilitado;
+	}
+
 	public Tipo() {
 		
 	}

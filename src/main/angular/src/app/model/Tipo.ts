@@ -5,4 +5,5 @@ export interface Tipo {
     caracteristicas: string;
     epoca: string;
     artistas: string;
+    habilitado: boolean;
 }
