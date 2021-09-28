@@ -23,17 +23,31 @@ public class Obra {
 	private String descripcion;
 	private int fecha;
 	private String tipo;
+	private boolean acdc;
 	
 	public Obra (String nombre, String autor, String descripcion,
-			int fecha, String tipo) {
+			int fecha, String tipo, boolean acdc) {
 		super();
 		this.nombre=nombre;
 		this.autor=autor;
 		this.descripcion=descripcion;
 		this.fecha=fecha;
 		this.tipo=tipo;
+		this.acdc=acdc;
 	}
 	
+	public boolean isAcdc() {
+		return acdc;
+	}
+
+
+
+	public void setAcdc(boolean acdc) {
+		this.acdc = acdc;
+	}
+
+
+
 	public Obra() {
 	}
 	
