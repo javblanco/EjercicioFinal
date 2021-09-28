@@ -10,7 +10,7 @@ import { ObraService } from '../service/obra.service';
 })
 export class ObraMaestroComponent implements OnInit {
 
-  obra: Obra[] = [];
+  obras: Obra[] = [];
 
   constructor(private obraService: ObraService,
     private location: Location) { }
@@ -20,7 +20,7 @@ export class ObraMaestroComponent implements OnInit {
   }
 
   listObras(): void {
-    this.obraService.findall().subscribe(list => {this.obra = list;});
+    this.obraService.findall().subscribe(list => {this.obras = list;});
   }
 
   borrar(id: number): void {
