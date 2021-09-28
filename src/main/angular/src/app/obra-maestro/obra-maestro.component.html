@@ -1,1 +1,71 @@
-<p>obra-maestro works!</p>
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    <h2>Lista de obras de arte</h2>
+
+<table *ngIf="obras.length">
+
+    
+
+</table>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Autor</th>
+            <th>Descripción</th>
+            <th>Año de creación</th>
+            <th>AC / DC</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let obra of obras">
+            <td>{{obra.nombre}}</td>
+            <td>{{obra.autor}}</td>
+            <td>{{obra.descripcion}}</td>
+            <td>{{obra.fecha}}</td>
+            <td><div *ngIf="obra.acdc; else NoPri">AC</div><ng-template #NoPri>DC</ng-template></td>
+            <td><button style="margin:10px;"  class="btn btn-warning" routerLink="/obra/{{obra.id}}">Actualizar</button> <button style="margin:10px;" class="btn btn-danger"  (click)="borrar(obra.id)">Borrar</button></td>
+        </tr>
+    </tbody>
+  </table>
+
+<button style="margin:10px;" class="btn btn-primary" routerLink="/obra/">Crear</button> <button style="margin:10px;" class="btn btn-primary" [routerLink]="['/index']">Salir</button>
+</body>
+</html>
+
+
+<style>
+
+
+    body
+        {
+    
+           background: rgba(139, 241, 70, 0.5);
+           border-radius: 10px;
+           
+           
+        }
+        
+        .formulario
+        {
+          margin-top: 40px;
+          display: inline-block;
+          display: block;
+        }
+        
+        .titulo
+        {
+          margin-top: auto;
+        }
+    
+        h2{
+            text-align: center;
+        }
+    
+        
+</style>

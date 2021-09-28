@@ -16,11 +16,11 @@ export class TipoService {
 
   constructor(private http: HttpClient) { }
 
-  findall(): Observable<Tipo[]> {
+  findAll(): Observable<Tipo[]> {
     return this.http.get<Tipo[]>(this.url);
   }
 
-  find(id:number): Observable<Tipo> {
+  findById(id:number): Observable<Tipo> {
     const urlId = `${this.url}/${id}`;
     return this.http.get<Tipo>(urlId);
   }

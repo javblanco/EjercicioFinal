@@ -25,7 +25,7 @@ export class ObraDeTipoService {
     return this.http.post<ObraDeTipo>(this.url, obraTipo, this.httpOptions)
   }
 
-  getActividadesProceso(id:number): Observable<Obra[]>
+  getObrasTipo(id:number): Observable<Obra[]>
   {
     const urlact='getObras';
     const xurl= `${this.url}/${urlact}/${id}`;
