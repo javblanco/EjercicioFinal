@@ -1,1 +1,66 @@
-<p>tipo-maestro works!</p>
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    <h2>Lista de estilos artísticos</h2>
+
+<table *ngIf="procesos.length">
+</table>
+
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Nombre</th>
+        <th scope="col">Descripción</th>
+        <th scope="col">Características</th>
+        <th scope="col">Época</th>
+        <th scope="col">Artistas</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let tipo of tipos">
+            <td>{{tipo.nombre}}</td>
+            <td>{{tipo.descripcion}}</td>
+            <td>{{tipo.caracteristicas}}</td>
+            <td>{{tipo.epoca}}</td>
+            <td>{{tipo.artistas}}</td>
+            <td><button style="margin:10px;"  class="btn btn-warning" routerLink="/tipo/{{tipo.id}}" >Actualizar</button> <button style="margin:10px;" class="btn btn-danger" (click)="borrar(tipo.id)">Borrar</button></td>
+        </tr>
+    </tbody>
+  </table>
+
+<button style="margin:10px;" class="btn btn-primary" routerLink="/proceso/">Crear Proceso</button> <button style="margin:10px;" class="btn btn-primary" [routerLink]="['/index']">Volver</button>
+</body>
+</html>
+
+
+<style>
+
+
+body
+    {
+
+       background: rgba(129, 209, 255, 0.5);
+       border-radius: 10px;
+       
+       
+    }
+    
+    .formulario
+    {
+      margin-top: 40px;
+      display: inline-block;
+      display: block;
+    }
+    
+    .titulo
+    {
+      margin-top: auto;
+    }
+
+    h2{
+        text-align: center;
+    }
+    
+    </style>

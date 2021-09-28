@@ -12,6 +12,8 @@ import { TipoDetalleComponent } from './tipo-detalle/tipo-detalle.component';
 import { IndiceComponent } from './indice/indice.component';
 import { ModelComponent } from './model/model.component';
 import { ServiceComponent } from './service/service.component';
+import { ObraDeTipoDetalleComponent } from './obra-de-tipo-detalle/obra-de-tipo-detalle.component';
+import { ObraDeTipoMaestroComponent } from './obra-de-tipo-maestro/obra-de-tipo-maestro.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { ServiceComponent } from './service/service.component';
     TipoDetalleComponent,
     IndiceComponent,
     ModelComponent,
-    ServiceComponent
+    ServiceComponent,
+    ObraDeTipoDetalleComponent,
+    ObraDeTipoMaestroComponent
   ],
   imports: [
     BrowserModule,

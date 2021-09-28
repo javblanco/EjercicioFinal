@@ -1,1 +1,70 @@
-<p>tipo-detalle works!</p>
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+
+<h2 class = "titulo">Detalles del Estilo </h2>
+
+<div class ="formulario" >
+
+<label for="nombre">Nombre :</label>
+<input class="form-control"  id="nombre" type="string" placeholder="Escribe un nombre para estilo" name="nombre" [(ngModel)]="tipo.nombre" maxlength="30"> <br>
+
+<label for="descripcion">Descripción:</label>
+<input class="form-control"  id="descripcion" type="string" placeholder="Define el estilo" name="descripcion" [(ngModel)]="tipo.descripcion" maxlength="60"> <br>
+
+<label for="caracteristicas">Descripción:</label>
+<input class="form-control"  id="caracteristicas" type="string" placeholder="Escribe las caracteristicas del estilo" name="caracteristicas" [(ngModel)]="tipo.caracteristicas" maxlength="60"> <br>
+
+<label for="epoca">Época:</label>
+<input class="form-control"  id="epoca" type="string" placeholder="Escribe la época" name="epoca" [(ngModel)]="tipo.epoca" maxlength="30"> <br>
+
+<label for="artistas">Artistas:</label>
+<input class="form-control"  id="artistas" type="string" placeholder="Escribe los principales artistas" name="artistas" [(ngModel)]="tipo.artistas" maxlength="60"> <br>
+
+      <div *ngIf="this.id!=0">
+        <app-obra-de-tipo-detalle></app-obra-de-tipo-detalle>
+        <br>
+      </div>
+  <br>
+<button class="btn btn-secondary" (click)="volver()">Salir</button>
+<button class="btn btn-success" (click)="save()" [routerLink]="['/proceso/list']">Guardar</button>
+
+</div>
+
+<br>
+
+<button class="btn btn-primary" routerLink="/proceso/list">Ver lista de Estilos Artísticos</button>
+
+</body>
+</html>
+
+
+<style>
+body
+{
+    width: 500px !important; 
+   text-align: center !important;
+   background: rgba(255,255,255,0.5);
+   border-radius: 10px;  
+   margin: auto;
+   
+   
+}
+
+.formulario
+{
+  margin-top: 40px;
+  display: inline-block;
+  display: block;
+  margin: 0 auto; 
+  max-width: 280px;
+}
+
+.titulo
+{
+  margin-top: auto;
+}
+
+
+</style>

@@ -1,0 +1,11 @@
+<label for="obra">Obras: </label>
+<ng-multiselect-dropdown [placeholder]="'Selecciona las obras'" [data]="obra" [settings]="dropdownSettings"
+  name='obra' [(ngModel)]="obrasSeleccionadas">
+
+</ng-multiselect-dropdown><br>
+
+<button class="btn btn-success" (click)="save()">Confirmar</button>
+<div *ngFor="let obra of obrasDelTipo" id="update">
+  <h5 style="font: size 12px;;" routerLink="/obra/{{obra.id}}">{{obra.nombre}}</h5>
+</div>
+<br>

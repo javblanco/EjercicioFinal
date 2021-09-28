@@ -1,1 +1,65 @@
-<p>obra-detalle works!</p>
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+
+<h2 class = "titulo">Detalles de las Obras</h2>
+<div class ="formulario" >
+
+<label for="nombre">Nombre :</label>
+<input  class="form-control"  id="nombre" type="string" placeholder="Tipo de Obra" name="nombre" [(ngModel)]="obra.nombre" maxlength="30" >  <br>
+
+<label for="autor">Autor :</label>
+<input  class="form-control"  id="autor" type="string" placeholder="Tipo de Obra" name="autor" [(ngModel)]="obra.autor" maxlength="30" >  <br>
+
+<label for="descripcion">Descripción :</label>
+<input  class="form-control"  id="descripcion" type="string" placeholder="Tipo de Obra" name="descripcion" [(ngModel)]="obra.descripcion" maxlength="100" >  <br>
+
+<label for="fecha">Año de creación :</label>
+<input  class="form-control"  id="fecha" type="number" placeholder="Tipo de Obra" name="fecha" [(ngModel)]="obra.fecha" maxlength="4" >  <br>
+
+<br>
+<button class="btn btn-secondary" (click)="volver()">Salir</button>
+<button class="btn btn-success" (click)="save()" [routerLink]="['/actividad/list']">Guardar</button>
+
+</div>
+
+<br>
+
+<button class="btn btn-primary" routerLink="/actividad/list">Ver lista de obras</button>
+
+<div *ngIf="mensaje">{{mensaje}}</div>
+
+</body>
+
+</html>
+
+<style>
+    body
+    {
+        width: 500px !important; 
+       text-align: center !important;
+       background: rgba(255,255,255,0.5);
+       border-radius: 10px;
+      
+       margin: auto;
+       
+       
+    }
+    
+    .formulario
+    {
+      margin-top: 40px;
+      display: inline-block;
+      display: block;
+      max-width: 280px;
+      margin: 0 auto; 
+    }
+    
+    .titulo
+    {
+      margin-top: auto;
+    }
+    
+    
+    </style>
