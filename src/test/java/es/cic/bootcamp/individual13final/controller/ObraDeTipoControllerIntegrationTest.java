@@ -32,7 +32,7 @@ import es.cic.bootcamp.individual13final.repository.ObraDeTipoRepository;
 @SpringBootTest
 @AutoConfigureMockMvc
 @Transactional
-class ActividadDeProcesoControllerIntegrationTest { 
+class ObraDeTipoIntegrationTest { 
 
 	@Autowired
 	private MockMvc mvc;

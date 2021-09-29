@@ -13,7 +13,7 @@ import es.cic.bootcamp.individual13final.model.ObraDeTipo;
 
 
 @DataJpaTest
-class ActividadDeProcesoRepositoryTest {
+class ObraDeTipoRepositoryTest {
 
 	@Autowired
 	private ObraDeTipoRepository obraDeTipoRepository;
