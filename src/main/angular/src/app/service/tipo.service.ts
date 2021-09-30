@@ -35,6 +35,6 @@ export class TipoService {
 
   delete(id: number): Observable<any> {
     const urlId = `${this.url}/${id}`;
-    return this.http.delete<Tipo>(urlId,this.httpOptions);
+    return this.http.delete<Tipo>(urlId);
   }
 }

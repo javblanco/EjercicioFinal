@@ -8,8 +8,6 @@ import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
-import java.time.LocalDate;
-import java.time.Month;
 import javax.persistence.EntityManager;
 import javax.transaction.Transactional;
 import org.junit.jupiter.api.BeforeEach;
