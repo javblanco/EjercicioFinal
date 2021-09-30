@@ -1,9 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-</head>
-<body>
-    <h2>Lista de obras de arte</h2>
+<h2>Lista de obras de arte</h2>
 
 <table *ngIf="obras.length">
 
@@ -35,12 +30,14 @@
   </table>
 
 <button style="margin:10px;" class="btn btn-primary" routerLink="/obra/">Crear</button> <button style="margin:10px;" class="btn btn-primary" [routerLink]="['/index']">Salir</button>
-</body>
-</html>
+
 
 
 <style>
 
+h2{
+  text-align: center;
+}
 
     body
         {

@@ -1,9 +1,4 @@
 
-<!DOCTYPE html>
-<html>
-    <head></head>
-    <body>
-
 <h2 class = "titulo">Especificaciones</h2>
 <div class ="formulario" >
 
@@ -20,7 +15,7 @@
 <input  class="form-control"  id="fecha" type="number" placeholder="XXXXXXXX" name="fecha" [(ngModel)]="obra.fecha" maxlength="8" min="0" >  <br>
 
 <br>
-      <label for="acdc">Antes/Después de cristo: </label> <br>
+      <label for="acdc">Antes/Después de Cristo: </label> <br>
     <input name="acdc" ng-control="options" type="radio" [value]="true"  [(ngModel)]="obra.acdc" > AC
     <input  name="acdc" ng-control="options" type="radio" [value]="false"  [(ngModel)]="obra.acdc" > DC
       <br>
@@ -28,26 +23,32 @@
 
 
 <br>
-<button class="btn btn-success" (click)="save()" [routerLink]="['/obra/list']">Guardar</button>
-<button class="btn btn-secondary" (click)="volver()" >Salir</button>
-
+  <div class="botones"> 
+    <button style= "margin: 10px" class="btn btn-success" (click)="save()" [routerLink]="['/obra/list']">Guardar</button>
+    <button style= "margin: 10px" class="btn btn-secondary" (click)="volver()" >Salir</button> <br> <br>
+   <button class="btn btn-primary" routerLink="/obra/list">Ver lista de obras</button>
+  </div>
 </div>
 
 <br>
 
-<button class="btn btn-primary" routerLink="/obra/list">Ver lista de obras</button>
+
 
 <div *ngIf="mensaje">{{mensaje}}</div>
 
-</body>
 
-</html>
+
 
 <style>
+
+h2{
+  text-align: center;
+}
+
     body
     {
-        width: 500px !important; 
-       text-align: center !important;
+      width: 500px !important; 
+       text-align: center;
        background: rgba(255,255,255,0.5);
        border-radius: 10px;
       
@@ -63,6 +64,7 @@
       display: block;
       max-width: 280px;
       margin: 0 auto; 
+      text-align: center;
     }
     
     .titulo
@@ -70,5 +72,10 @@
       margin-top: auto;
     }
     
+    .botones{
+      text-align: center;
+    }
     
-    </style>
+    
+   
+ </style>
