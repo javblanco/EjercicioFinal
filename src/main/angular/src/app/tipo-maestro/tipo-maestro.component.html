@@ -1,8 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-</head>
-<body>
+
     <h2>Lista de estilos artísticos</h2>
 
 <table *ngIf="tipos.length">
@@ -33,12 +29,13 @@
   </table>
 
 <button style="margin:10px;" class="btn btn-primary" routerLink="/tipo/">Crear </button> <button style="margin:10px;" class="btn btn-primary" [routerLink]="['/index']">Salir</button>
-</body>
-</html>
 
 
 <style>
 
+h2{
+  text-align: center;
+}
 
 body
     {

@@ -1,8 +1,3 @@
-<!DOCTYPE html>
-<html>
-    <head></head>
-    <body>
-
 <h2 class = "titulo">Especificaciones </h2>
 
 <div class ="formulario" >
@@ -14,7 +9,7 @@
 <input class="form-control"  id="descripcion" type="string" placeholder="Define el estilo" name="descripcion" [(ngModel)]="tipo.descripcion" maxlength="60"> <br>
 
 <label for="caracteristicas">Características:</label>
-<input class="form-control"  id="caracteristicas" type="string" placeholder="Escribe las caracteristicas del estilo" name="caracteristicas" [(ngModel)]="tipo.caracteristicas" maxlength="60"> <br>
+<input class="form-control"  id="caracteristicas" type="string" placeholder="Escribe las características del estilo" name="caracteristicas" [(ngModel)]="tipo.caracteristicas" maxlength="60"> <br>
 
 <label for="epoca">Época:</label>
 <input class="form-control"  id="epoca" type="string" placeholder="Escribe la época" name="epoca" [(ngModel)]="tipo.epoca" maxlength="30"> <br>
@@ -34,20 +29,25 @@
       </div>
   <br>
 
-<button class="btn btn-success" (click)="save()" [routerLink]="['/tipo/list']">Guardar</button>
-<button class="btn btn-secondary" (click)="volver()">Salir</button>
+  <div class="botones2"> 
+    <button style= "margin: 10px" class="btn btn-success" (click)="save()" [routerLink]="['/tipo/list']">Guardar</button>
+    <button style= "margin: 10px" class="btn btn-secondary" (click)="volver()">Salir</button>
+    <button class="btn btn-primary" routerLink="/tipo/list">Ver lista de Estilos Artísticos</button>
+  </div>
+
 
 </div>
 
 <br>
 
-<button class="btn btn-primary" routerLink="/tipo/list">Ver lista de Estilos Artísticos</button>
-
-</body>
-</html>
 
 
 <style>
+
+h2{
+  text-align: center;
+}
+
 body
 {
     width: 500px !important; 
@@ -66,12 +66,18 @@ body
   display: block;
   margin: 0 auto; 
   max-width: 280px;
+  text-align: center !important;
+
 }
 
 .titulo
 {
   margin-top: auto;
 }
+
+.botones2{
+      text-align: center;
+    }
 
 
 </style>
