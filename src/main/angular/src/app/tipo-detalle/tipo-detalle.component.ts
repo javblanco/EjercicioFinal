@@ -50,7 +50,7 @@ export class TipoDetalleComponent implements OnInit {
       alert('Se ha creado el tipo de obra de arte');
     }
   } else{
-    alert("El campo de nombre y descripcion son obligatorios");
+    alert("El campo de nombre y descripción son obligatorios");
   }
 }
 

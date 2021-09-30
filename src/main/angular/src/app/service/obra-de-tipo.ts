@@ -9,7 +9,7 @@ import { Obra } from '../model/Obra';
 })
 export class ObraDeTipoService {
 
-  url = 'http://localhost:8080/api/obratipo';
+  url = 'http://localhost:8080/api/obraTipo';
 
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -27,8 +27,8 @@ export class ObraDeTipoService {
 
   getObrasTipo(id:number): Observable<Obra[]>
   {
-    const urlact='getObras';
-    const xurl= `${this.url}/${urlact}/${id}`;
+    const urlact='getObra';
+    const xurl= `${this.url}/${id}`;
     console.log(xurl);
     return this.http.get<Obra[]>(xurl);
   }

@@ -4,7 +4,7 @@ export interface Obra {
     nombre: string;
     autor: string;
     descripcion: string;
-    fecha: string;
+    fecha: number;
     acdc: boolean;
     
 }

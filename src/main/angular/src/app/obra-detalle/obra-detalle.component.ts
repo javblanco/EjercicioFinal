@@ -35,7 +35,8 @@ export class ObraDetalleComponent implements OnInit {
   }
 
   save(): void {
-    if (this.isEmpty(this.obra.nombre) && this.isEmpty(this.obra.autor)) {
+    if (this.isEmpty(this.obra.nombre) && this.isEmpty(this.obra.autor) && this.obra.fecha !== null) {
+     if (this.obra.fecha >= 0) {
       if (this.obra.id) {
         this.update();
         this.mensaje = 'Se ha modificado la obra';
@@ -47,9 +48,13 @@ export class ObraDetalleComponent implements OnInit {
         this.create();
         alert('Se ha creado la obra')
       }
+     } else {
+      alert("El año tiene que ser un número positivo");
+     }
+      
     }
     else {
-      alert("El campo de nombre y autor son obligatorios");
+      alert("El campo del nombre, autor/a y el año son obligatorios");
     }
   }
 
