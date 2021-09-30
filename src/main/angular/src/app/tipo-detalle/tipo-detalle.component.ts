@@ -47,7 +47,7 @@ export class TipoDetalleComponent implements OnInit {
     }
     else{
       this.create();
-      alert('Se ha creado el tipo de obra de arte' + this.tipo.nombre);
+      alert('Se ha creado el tipo de obra de arte ' + this.tipo.nombre);
     }
   } else{
     alert("El campo de nombre y descripción son obligatorios");

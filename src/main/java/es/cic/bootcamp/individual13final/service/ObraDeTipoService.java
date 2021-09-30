@@ -2,6 +2,7 @@ package es.cic.bootcamp.individual13final.service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 import javax.transaction.Transactional;
 
@@ -35,8 +36,13 @@ public class ObraDeTipoService {
 	}
 
     public ObraDeTipo findById(Long id) {
-		ObraDeTipo ot = obraDeTipoRepository.findById(id).get();
-		return ot;
+		Optional<ObraDeTipo>  ot = obraDeTipoRepository.findById(id);
+		if (ot.isPresent()){
+			return ot.get();
+		} else {
+			return null;
+		}
+	
 	}
 
     public void update(ObraDeTipo ot) {
@@ -52,10 +58,10 @@ public class ObraDeTipoService {
 	public List<Obra> getObrasTipo(Long idTipo)
 	{
 		
-		List<ObraDeTipo> ObrasTipo = findAll();
+		List<ObraDeTipo> TObrasTipo = findAll();
 		List<Obra> obras = new ArrayList<>();
 
-		for(ObraDeTipo odt : ObrasTipo)
+		for(ObraDeTipo odt : TObrasTipo)
 		{
 			if(idTipo == odt.getIdTipo())
 			{
@@ -68,9 +74,9 @@ public class ObraDeTipoService {
 
 	public void deleteAllTipo(Long idTipo)
 	{
-		List<ObraDeTipo> ObrasTipo = findAll();
+		var TObrasTipo = findAll();
 
-		for(ObraDeTipo odt : ObrasTipo)
+		for(ObraDeTipo odt : TObrasTipo)
 		{
 			if(idTipo == odt.getIdTipo())
 			{

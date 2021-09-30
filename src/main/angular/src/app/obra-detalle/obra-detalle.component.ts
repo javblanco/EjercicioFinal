@@ -46,7 +46,7 @@ export class ObraDetalleComponent implements OnInit {
 
       else {
         this.create();
-        alert('Se ha creado la obra' + this.obra.nombre)
+        alert('Se ha creado la obra ' + this.obra.nombre)
       }
      } else {
       alert("El año tiene que ser un número positivo");

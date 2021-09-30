@@ -28,7 +28,7 @@ export class ObraDeTipoService {
   getObrasTipo(id:number): Observable<Obra[]>
   {
     const urlact='getObra';
-    const xurl= `${this.url}/${id}`;
+    const xurl= `${this.url}/${urlact}/${id}`;
     console.log(xurl);
     return this.http.get<Obra[]>(xurl);
   }

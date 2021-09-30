@@ -26,17 +26,18 @@
     <input name="habilitado" ng-control="options" type="radio" [value]="true"  [(ngModel)]="tipo.habilitado" >SI
     <input  name="habilitado" ng-control="options" type="radio" [value]="false"  [(ngModel)]="tipo.habilitado" >NO 
     <br>
-
-
+    <br>
 
 <div *ngIf="this.id!=0">
         <app-obra-de-tipo-detalle></app-obra-de-tipo-detalle>
         <br>
       </div>
   <br>
+
+<h6>Las obras del estilo artístico xxxx son: </h6>
+
 <button class="btn btn-success" (click)="save()" [routerLink]="['/tipo/list']">Guardar</button>
 <button class="btn btn-secondary" (click)="volver()">Salir</button>
-
 
 </div>
 
