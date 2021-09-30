@@ -16,7 +16,7 @@ const routes: Routes = [
   {path: 'tipo/list', component: TipoMaestroComponent},
   {path: 'tipo', component: TipoDetalleComponent},
   {path: 'tipo/:id', component: TipoDetalleComponent},
-  {path: 'obraDeTipo', component: ObraDeTipoDetalleComponent},
+  {path: 'obraTipo', component: ObraDeTipoDetalleComponent},
 
 ];
 

@@ -40,13 +40,13 @@ export class ObraDetalleComponent implements OnInit {
       if (this.obra.id) {
         this.update();
         this.mensaje = 'Se ha modificado la obra';
-        alert('Se ha modificado la obra ' + this.obra.id);
+        alert('Se ha modificado la obra ' + this.obra.nombre);
       }
 
 
       else {
         this.create();
-        alert('Se ha creado la obra')
+        alert('Se ha creado la obra' + this.obra.nombre)
       }
      } else {
       alert("El año tiene que ser un número positivo");
