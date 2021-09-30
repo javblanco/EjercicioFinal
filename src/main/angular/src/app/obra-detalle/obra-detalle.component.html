@@ -17,7 +17,7 @@
 <input  class="form-control"  id="descripcion" type="string" placeholder="Descripción de la obra" name="descripcion" [(ngModel)]="obra.descripcion" maxlength="100" >  <br>
 
 <label for="fecha">Año de creación :</label>
-<input  class="form-control"  id="fecha" type="string" placeholder="XXXXXXXX" name="fecha" [(ngModel)]="obra.fecha" maxlength="8" >  <br>
+<input  class="form-control"  id="fecha" type="number" placeholder="XXXXXXXX" name="fecha" [(ngModel)]="obra.fecha" maxlength="8" min="0" >  <br>
 
 <br>
       <label for="acdc">Antes/Después de cristo: </label> <br>

@@ -65,6 +65,7 @@ export class ObraDeTipoDetalleComponent implements OnInit {
     }
     this.obraDT = <ObraDeTipo>{};
   }
+  
   public mostrar(): void {
     let id = Number(this.router.snapshot.paramMap.get("id"));
     this.obraDeTipoService.getObrasTipo(id).subscribe(resultado2 => { this.obrasDelTipo = resultado2;});
