@@ -1,27 +1,34 @@
-# Individual13Final
+# Museo HEL-ARTE 
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.4.
+Un proyecto desarrollado por Javier Blanco para el museo HEL-ARTE 
 
-## Development server
+## Requisitos solicitados por el cliente
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+-Necesidad de una aplicación intuitiva, sencilla y amigable con el cliente.
+-Conectividad entre la parte de servidor y la parte de cliente para su correcta ejecución.
+-Correcta ejecución de los posibles casos de uso de cada una de las entidades.
+-Listado de las entidades correspondientes en cada uno de sus apartados.
+-Correcto funcionamiento de la carga de las obras de arte dentro de cada estilo artístico.
 
-## Code scaffolding
+## Futuras actualizaciones
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+-No se tiene en cuenta el orden ni la duplicidad.
+-Añadir una opcion que al deshabilitar un estilo no te deje modificarlo
+-Añadir imagenes un campo imagen a las obras para poder verlo en el catálogo
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Conexion servidor-cliente
 
-## Running unit tests
+Es necesario realizar un pequeño set-up de arranque antes de poder navegar por la aplicación y visualizar las vistas.
+Para ello necesitaremos ejecutar ng serve desde el proyecto Angular y mvn spring-boot:run desde la raíz del proyecto que concuerda con el apartado de servidor de Spring.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## MANEJO PRINCIPAL ENTRE VISTAS
 
-## Running end-to-end tests
+El cliente puede iniciar su navegación por la aplicación desde la url 'http://localhost:4200' .
+Al navegar al índice de la aplicación podremos acceder a las dos listas disponibles, tanto a la lista de estilos artísticos pulsando el botón de ESTILOS como a la lista de obras de arte pulsando en el botón de OBRAS.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Para crear una obra, pulsamos en el botón de crear. Rellenamos el formulario (que tiene unos campos obligatorios) y pulsamos en CREAR. En este momento ya tenemos una obra en la lista. Desde aquí, podremos modificar o borrar la obra recién creada o, crear una obra nueva.
 
-## Further help
+Para crear un estilo, pulsamos el botón de crear. Rellenaremos los campos del formulario y pulsamos en botón de CREAR. Con esto ya tenemos un nuevo estilo artístico creado. Desde esta página se puede modificar el estilo, borrar, o crear uno nuevo. Si pulsamos en el botón de ACTUALIZAR se despliega el formulario con los campos ya rellenos y además, aparece un desplegable desde el cual se pueden añadir las obras de arte a cada estilo artístico.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Cada una de las páginas tiene un botón de SALIR (excepto la principal), este botón te manda a la pantalla anterior.
