@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>es.cic.bootcamp</groupId>
 	<artifactId>individual13final</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0</version>
 	<name>individual13final</name>
 	<description>Ejercicio final de Javier Blanco (curso 13)</description>
 	<properties>

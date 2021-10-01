@@ -1,0 +1,65 @@
+
+    <h2>Lista de estilos artísticos</h2>
+
+<table *ngIf="tipos.length">
+</table>
+
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Nombre</th>
+        <th scope="col">Descripción</th>
+        <th scope="col">Características</th>
+        <th scope="col">Época</th>
+        <th scope="col">Artistas</th>
+        <th scope="col">Habilitado</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let tipo of tipos">
+            <td>{{tipo.nombre}}</td>
+            <td>{{tipo.descripcion}}</td>
+            <td>{{tipo.caracteristicas}}</td>
+            <td>{{tipo.epoca}}</td>
+            <td>{{tipo.artistas}}</td>
+            <td><div *ngIf="tipo.habilitado; else NoPri">Si</div><ng-template #NoPri>No</ng-template></td>
+            <td><button style="margin:10px;"  class="btn btn-warning" routerLink="/tipo/{{tipo.id}}" >Actualizar</button> <button style="margin:10px;" class="btn btn-danger" (click)="borrar(tipo.id)">Borrar</button></td>
+        </tr>
+    </tbody>
+  </table>
+
+<button style="margin:10px;" class="btn btn-primary" routerLink="/tipo/">Crear </button> <button style="margin:10px;" class="btn btn-primary" [routerLink]="['/index']">Salir</button>
+
+
+<style>
+
+h2{
+  text-align: center;
+}
+
+body
+    {
+
+      background: rgb(255, 255, 255);;
+       border-radius: 10px;
+       
+       
+    }
+    
+    .formulario
+    {
+      margin-top: 40px;
+      display: inline-block;
+      display: block;
+    }
+    
+    .titulo
+    {
+      margin-top: auto;
+    }
+
+    h2{
+        text-align: center;
+    }
+    
+    </style>

@@ -1,0 +1,83 @@
+<h2 class = "titulo">Especificaciones </h2>
+
+<div class ="formulario" >
+
+<label for="nombre">Nombre :</label>
+<input class="form-control"  id="nombre" type="string" placeholder="Escribe un nombre para estilo" name="nombre" [(ngModel)]="tipo.nombre" maxlength="30"> <br>
+
+<label for="descripcion">Descripción:</label>
+<input class="form-control"  id="descripcion" type="string" placeholder="Define el estilo" name="descripcion" [(ngModel)]="tipo.descripcion" maxlength="60"> <br>
+
+<label for="caracteristicas">Características:</label>
+<input class="form-control"  id="caracteristicas" type="string" placeholder="Escribe las características del estilo" name="caracteristicas" [(ngModel)]="tipo.caracteristicas" maxlength="60"> <br>
+
+<label for="epoca">Época:</label>
+<input class="form-control"  id="epoca" type="string" placeholder="Escribe la época" name="epoca" [(ngModel)]="tipo.epoca" maxlength="30"> <br>
+
+<label for="artistas">Artistas:</label>
+<input class="form-control"  id="artistas" type="string" placeholder="Escribe los principales artistas" name="artistas" [(ngModel)]="tipo.artistas" maxlength="60"> <br>
+     
+<label for="habilitado">Habilitado :</label>
+    <input name="habilitado" ng-control="options" type="radio" [value]="true"  [(ngModel)]="tipo.habilitado" >SI
+    <input  name="habilitado" ng-control="options" type="radio" [value]="false"  [(ngModel)]="tipo.habilitado" >NO 
+    <br>
+    <br>
+
+<div *ngIf="this.id!=0">
+        <app-obra-de-tipo-detalle></app-obra-de-tipo-detalle>
+        <br>
+      </div>
+  <br>
+
+  <div class="botones2"> 
+    <button style= "margin: 10px" class="btn btn-success" (click)="save()" [routerLink]="['/tipo/list']">Guardar</button>
+    <button style= "margin: 10px" class="btn btn-secondary" (click)="volver()">Salir</button>
+    <button class="btn btn-primary" routerLink="/tipo/list">Ver lista de Estilos Artísticos</button>
+  </div>
+
+
+</div>
+
+<br>
+
+
+
+<style>
+
+h2{
+  text-align: center;
+}
+
+body
+{
+    width: 500px !important; 
+   text-align: center !important;
+   background: rgba(255,255,255,0.5);
+   border-radius: 10px;  
+   margin: auto;
+   
+   
+}
+
+.formulario
+{
+  margin-top: 40px;
+  display: inline-block;
+  display: block;
+  margin: 0 auto; 
+  max-width: 280px;
+  text-align: center !important;
+
+}
+
+.titulo
+{
+  margin-top: auto;
+}
+
+.botones2{
+      text-align: center;
+    }
+
+
+</style>
